@@ -34,8 +34,8 @@ for imagePath in paths.list_images(args["images"]):
     # show the image
     cv2.putText(newimg, "{}: {:.2f}".format(text, rgbmean[0]), (10, 30),
                 cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 0, 255), 3)
-    cv2.imshow("Image", newimg)
-
+    cv2.imshow(imagePath, newimg)
     key = cv2.waitKey(0)
+    cv2.destroyAllWindows()
 # Threshold for this set of images it's around 72
 # ./flared-or-not.py -i ~/training-data/good-data -t 72
