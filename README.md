@@ -15,9 +15,8 @@
     
  Getting started
  
- To run and test this commands you can use the python console or run them directly in your Ubuntu command line interface (if
- you already have installed python in your linux machine).
-  - 
+ To run and test this commands you can use the python console or run them directly in your Ubuntu command line interface 
+ (if you already have installed python in your linux machine). 
  
 Requisites
 
@@ -43,3 +42,4 @@ Here are some examples.
   - To run flaredtest.py just type:
    ./flaredtest.py -i /path_to_your_data/directory_containing_images -t 72
    
+ 
