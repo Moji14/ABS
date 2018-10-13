@@ -14,10 +14,9 @@ ap.add_argument("-t", "--threshold", type=float, default=100.0,
 args = vars(ap.parse_args())
 
 #Load image
-img = cv2.imread(args["image"])
 
 #Compute mean brigtness
-rgbmean = cv2.mean(cv2.mean(img))
+rgbmean = cv2.mean(cv2.mean(cv2.imread(args["image"])))
 
 #Print 1 if the image is 'flared' and 0 if not
 if rgbmean[0] > args["threshold"]:
