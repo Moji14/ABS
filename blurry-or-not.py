@@ -19,9 +19,7 @@ args = vars(ap.parse_args())
 
 # load the image, convert it to grayscale, and compute the
 # focus measure of the image using the Variance of Laplacian method
-image = cv2.imread(args["image"])
-gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-fm = variance_of_laplacian(gray)
+fm = variance_of_laplacian(cv2.cvtColor(cv2.imread(args["image"]), cv2.COLOR_BGR2GRAY))
 
 # if the focus measure is less than the supplied threshold,
 # then the image should be considered "blurry"
