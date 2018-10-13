@@ -9,8 +9,8 @@
       
       - blurrytest.py and flaredtest.py 
       Takes all images in a given directory and analyze them using a windown as a interface to
-      show the image and result of the analysis. It's more convenient for analysing a bunch of images without invokint 
-      the comand for every single image.
+      show the image and result of the analysis. It's more convenient for analysing a bunch of images without 
+      invoking the comand for every single image.
     
     
  Getting started
