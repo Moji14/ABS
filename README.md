@@ -1,21 +1,19 @@
 # ABS
 
-    ABS project was created with the intention of detecting blurred and/or flared images.
-    
-    This proyect const of 5 files, 2 for blurred images detection and 2 for flared images detection:
-    
-      - blurry-or-no.py and flared-or-not.py 
-      Takes an image and analize it to determine if it's blurred or flared respectively.
-      
-      - blurrytest.py and flaredtest.py
-      This two files was created with the intetion of analyze and verify these python programs.
-      Each of this programs takes all images in a given directory and analyze them using a windown as a interface to
-      show the image and result of the analysis. It's more convenient for analysing a bunch of images without 
-      invoking the comand for every single image.
-      
-      "validation.sh" it's a linux bash script made to validate the python scripts.
-    
-    
+ABS project was created with the intention of detecting blurred and/or flared images.
+
+This project const of 5 files, 2 for blurred images detection and 2 for flared images detection:
+
+  - blurry-or-no.py and flared-or-not.py: Takes an image and analyse it to determine if it's blurred or flared respectively.
+  
+  - blurrytest.py and flaredtest.py: This two files was created with the intention of analyse and verify these python programs.
+  
+Each of this programs takes all images in a given directory and analyse them using a window as a interface to show the image and result of the analysis. It's more convenient for analysing a bunch of images without invoking the command for every single image.
+
+"validation.sh": It's a Linux bash script made to validate the python scripts.
+
+
+     
  Getting started
  
  To run and test this commands you can use the python console or run them directly in your Ubuntu command line interface 
