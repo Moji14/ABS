@@ -33,10 +33,10 @@ Once you get your installation done (check this howto if you ineed to install it
 https://docs.opencv.org/3.4.1/d2/de6/tutorial_py_setup_in_ubuntu.html ) you are ready to run this programs.
 Here are some examples.
   
-  - To run blurry-or-not.py just type:
+  - To run flared-or-not.py just type:
     ./flared-or-not.py -i /path_to_your_data/image.jpg -t 115
 
-    - To run flared-or-not.py just type:
+   - To run flared-or-not.py just type:
     ./flared-or-not.py -i /path_to_your_data/image.jpg -t 73
 
   - To run blurrytest.py just type:
