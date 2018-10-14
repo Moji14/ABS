@@ -23,7 +23,7 @@ for imagePath in paths.list_images(args["images"]):
     newimg = cv2.resize(img, (int(newX), int(newY)))
 
     #Compute mean brigtness
-    rgbmean = cv2.mean(cv2.mean(newimg))
+    rgbmean = cv2.mean(cv2.mean(img))
 
     # if the focus measure is less than the supplied threshold,
     # then the image should be considered "blurry"
@@ -31,11 +31,15 @@ for imagePath in paths.list_images(args["images"]):
     if rgbmean[0] > args["threshold"]:
         text = "Flared"
 
+    # Scaling image to display it
+    imgScale = 0.2  # W / width
+    newX, newY = img.shape[1] * imgScale, img.shape[0] * imgScale
+    newimg = cv2.resize(img, (int(newX), int(newY)))
+
     # show the image
     cv2.putText(newimg, "{}: {:.2f}".format(text, rgbmean[0]), (10, 30),
                 cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 0, 255), 3)
-    cv2.imshow(imagePath, newimg)
+    cv2.imshow("Image", newimg)
     key = cv2.waitKey(0)
-    cv2.destroyAllWindows()
 # Threshold for this set of images it's around 72
 # ./flared-or-not.py -i ~/training-data/good-data -t 72
