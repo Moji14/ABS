@@ -7,8 +7,9 @@
       - blurry-or-no.py and flared-or-not.py 
       Takes an image and analize it to determine if it's blurred or flared respectively.
       
-      - blurrytest.py and flaredtest.py 
-      Takes all images in a given directory and analyze them using a windown as a interface to
+      - blurrytest.py and flaredtest.py
+      This two files was created with the intetion of analyze verify and validate these python programs.
+      Each of this programs takes all images in a given directory and analyze them using a windown as a interface to
       show the image and result of the analysis. It's more convenient for analysing a bunch of images without 
       invoking the comand for every single image.
     
