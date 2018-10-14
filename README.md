@@ -2,7 +2,7 @@
 
     ABS project was created with the intention of detecting blurred and/or flared images.
     
-    This proyect const of 4 files, 2 for blurred images detection and 2 for flared images detection:
+    This proyect const of 5 files, 2 for blurred images detection and 2 for flared images detection:
     
       - blurry-or-no.py and flared-or-not.py 
       Takes an image and analize it to determine if it's blurred or flared respectively.
@@ -12,6 +12,8 @@
       Each of this programs takes all images in a given directory and analyze them using a windown as a interface to
       show the image and result of the analysis. It's more convenient for analysing a bunch of images without 
       invoking the comand for every single image.
+      
+      "validation.sh" it's a linux bash script made to validate the python scripts.
     
     
  Getting started
@@ -32,15 +34,23 @@ https://docs.opencv.org/3.4.1/d2/de6/tutorial_py_setup_in_ubuntu.html ) you are 
 Here are some examples.
   
   - To run blurry-or-not.py just type:
-    ./flared-or-not.py -i /path_to_your_data/image.jpg -t 700
+    ./flared-or-not.py -i /path_to_your_data/image.jpg -t 115
 
     - To run flared-or-not.py just type:
-    ./flared-or-not.py -i /path_to_your_data/image.jpg -t 72
+    ./flared-or-not.py -i /path_to_your_data/image.jpg -t 73
 
   - To run blurrytest.py just type:
-    ./blurrytest.py -i /path_to_your_data//directory_containing_images -t 700
+    ./blurrytest.py -i /path_to_your_data//directory_containing_images -t 115
   
   - To run flaredtest.py just type:
-   ./flaredtest.py -i /path_to_your_data/directory_containing_images -t 72
+   ./flaredtest.py -i /path_to_your_data/directory_containing_images -t 73
    
+   
+   Validation script use
+   
+   Tu verify and validate the python algorithms with any set of images follow this set of instructions:
+   
+   - Download the files
+   - Create or copy the directory "training-data"  in /home/<user>/
+   - Execute the script (./validation.sh)
  
