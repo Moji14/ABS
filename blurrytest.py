@@ -24,12 +24,7 @@ for imagePath in paths.list_images(args["images"]):
     # method
     img = cv2.imread(imagePath)
 
-    # Scaling image to display it
-    imgScale = 0.2  # W / width
-    newX, newY = img.shape[1] * imgScale, img.shape[0] * imgScale
-    newimg = cv2.resize(img, (int(newX), int(newY)))
-
-    gray = cv2.cvtColor(newimg, cv2.COLOR_BGR2GRAY)
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     fm = variance_of_laplacian(gray)
     text = "Not Blurry"
 
@@ -37,6 +32,11 @@ for imagePath in paths.list_images(args["images"]):
     # then the image should be considered "blurry"
     if fm < args["threshold"]:
         text = "Blurry"
+
+    # Scaling image to display it
+    imgScale = 0.2  # W / width
+    newX, newY = img.shape[1] * imgScale, img.shape[0] * imgScale
+    newimg = cv2.resize(img, (int(newX), int(newY)))
 
     # show the image
     cv2.putText(newimg, "{}: {:.2f}".format(text, fm), (10, 30),

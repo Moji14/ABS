@@ -25,11 +25,10 @@ fm = variance_of_laplacian(cv2.cvtColor(cv2.imread(args["image"]), cv2.COLOR_BGR
 # then the image should be considered "blurry"
 if fm < args["threshold"]:
     #Blurry
-    result = 1
+    exit(1)
 else:
     #Not Blurry
-    result = 0
-print result
+    exit(0)
 
 # Threshold for this set of images it's around 700
 #./blurry-or-not.py -i ~/training-data/blurry-data/20170502T171526_G0094538.JPG -t 700

@@ -21,10 +21,10 @@ rgbmean = cv2.mean(cv2.mean(cv2.imread(args["image"])))
 #Print 1 if the image is 'flared' and 0 if not
 if rgbmean[0] > args["threshold"]:
     #Flared
-    print (1)
+    exit(1)
 else:
     #Not flared
-    print (0)
+    exit(0)
 
 # Threshold for this set of images it's around 72
 # ./flared-or-not.py -i ~/training-data/good-data -t 72
